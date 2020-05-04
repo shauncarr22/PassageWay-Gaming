@@ -1,18 +1,14 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-class Navbar extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
 
-        };
-    };
+const NavBar = () => {
+    return(
+        <div className="topnav">
+            <a className="active"><Link to = "/">Home</Link></a>
+            <a className="link__nav"><Link to = "/post">Post</Link></a>
+        </div>
+    );
+}
 
-    render(){
-        return(
-            <div>
-                <h1>Navbar</h1>
-            </div>
-        );
-    };
-};
+export default NavBar
