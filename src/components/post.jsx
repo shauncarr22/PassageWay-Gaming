@@ -10,11 +10,15 @@ class Post extends Component {
     };
 
     handleChange(e){
-        console.log(e.target.value)
+        //console.log(e.target.value)
+        this.setState({post: e.target.value})
     };
 
-    handleClick(){
-        console.log(':O ive been clicked')
+    handleClick(e){
+        e.preventDefault()
+        console.log(':O ive been clicked');
+        console.log(`this is the current state ${this.state.post}`);
+        window.alert('please dont do that yet... thanks :)');
     };
 
     render(){
