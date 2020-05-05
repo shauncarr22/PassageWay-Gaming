@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class HomePage extends Component {
     constructor(props){
         super(props)
         this.state = {
-
+            
         };
+    };
+
+
+    componentDidMount(){
+        console.log('cool')
     };
 
     render(){
@@ -22,7 +29,7 @@ class HomePage extends Component {
                     </p>
                 </div>
                 <div className="HomePage_NewPost">
-                    <button className="MakePost">Make New Post</button>
+                    <button className="MakePost"><Link to = '/post'>Make New Post</Link></button>
                 </div>
             </div>
         );

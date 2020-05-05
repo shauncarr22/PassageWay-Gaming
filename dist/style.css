@@ -137,3 +137,27 @@ a:hover {
     font-size: large;
     padding: 13px 103px;
 }
+
+/* Post CSS */
+
+.Input_Box {
+    background: #c4c4c4;
+    position: relative;
+    text-align: center;
+    width: 640px;
+    height: 250px;
+    left: 30%;
+    top: 106px;
+}
+
+.Input {
+    position: relative;
+    top: 10px;
+}
+
+.Sumbit_Post {
+    position: relative;
+    font-size: large;
+    top: 16px;
+    padding: 15px 15px;
+}

@@ -5,6 +5,7 @@ import Player from './components/player.jsx'
 import NavBar from './components/navbar.jsx'
 import Login from './components/login.jsx'
 import Signup from './components/signup.jsx'
+import Post from './components/post.jsx'
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
                 <Route path = "/profile" component={Player}/>
                 <Route path = '/login' component={Login}/>
                 <Route path = '/register' component={Signup}/>
+                <Route path = '/post' component={Post}/>
             </BrowserRouter>
         );
     };

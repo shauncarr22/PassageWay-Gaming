@@ -1,20 +1,33 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
 
 class Post extends Component {
     constructor(props){
         super(props)
         this.state = {
-
+            post: null
         };
+    };
+
+    handleChange(e){
+        console.log(e.target.value)
+    };
+
+    handleClick(){
+        console.log(':O ive been clicked')
     };
 
     render(){
         return(
-            <div>
-                <h1>Post</h1>
+            <div className="Input_Box">
+                <form>
+                    <textarea className="Input" rows='10' cols='75' onChange={this.handleChange.bind(this)}></textarea>
+                    <br/>
+                    <button className="Sumbit_Post" onClick={this.handleClick.bind(this)}>Post It</button>
+                </form>
             </div>
         );
     };
 };
 
-export default Post
+export default Post 
