@@ -4,11 +4,20 @@ import {Link} from 'react-router-dom';
 
 const NavBar = () => {
     return(
-        <div className="topnav">
-            <a className="active"><Link to = "/">Home</Link></a>
-            <a className="link__nav"><Link to = "/post">Post</Link></a>
-        </div>
+      <nav>
+          <ul className="menu">
+              <li className='logo'>Logo</li>
+              <li className="item"><a><Link to='/'>Home</Link></a></li>
+              <li className="item"><a><Link to='/post'>Post</Link></a></li>
+              <li className='item'><a><Link to='/about'>About</Link></a></li>
+              <li/>
+              <li className="item button"><a><Link to='/login'>Login</Link></a></li>
+              <li className='item button secondary'><a><Link to='/register'>Sign Up</Link></a></li>
+              <li className="toggle"><span className="bars"></span></li>
+          </ul>
+      </nav>
     );
 }
 
 export default NavBar
+
