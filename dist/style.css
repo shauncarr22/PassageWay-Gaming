@@ -77,3 +77,63 @@ a:hover {
 
 }
 
+/* HomePage CSS */
+
+.Container {
+    display: flex;
+}
+
+.Home_PostBox {
+    background: #c4c4c4;
+    position: relative;
+    width: 540px;
+    height: 220px;
+    top: 110px;
+    left: 15%;
+}
+
+.Post_Username {
+    position: relative;
+    top: 10px;
+    left: 5%;
+}
+
+.Post {
+    position: relative;
+    width: 492px;
+    height: 132px;
+    top: 20px;
+    left: 5%;
+}
+
+.HomePage_ProfileBox {
+    background: #c4c4c4;
+    position: relative;
+    width: 330px;
+    height: 215px;
+    top: 110px;
+    left: 80%;
+}
+
+.User_cur {
+    position: relative;
+    text-align: center;
+    top: 180px;
+}
+
+.HomePage_NewPost {
+    display: block;
+    text-align: center;
+    background: #c4c4c4;
+    position: relative;
+    width: 330px;
+    height: 72px;
+    left: 34.6%;
+    top: 350px;
+}
+
+.MakePost {
+    position: relative;
+    font-size: large;
+    padding: 13px 103px;
+}
