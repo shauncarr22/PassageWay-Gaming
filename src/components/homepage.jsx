@@ -6,28 +6,34 @@ class HomePage extends Component {
     constructor(props){
         super(props)
         this.state = {
-            
+           posts: []
         };
     };
 
 
     componentDidMount(){
-        console.log('cool')
+        Axios.get('http://localhost:3000/getPost')
+        .then((data) => {
+            this.setState({posts: data.data})
+            console.log(this.state.posts)
+        });
     };
 
     render(){
         return(
             <div className="Container">
                 <div className="HomePage_ProfileBox">
-                    <p className="User_cur">Logged in as Lask1ey</p>
+                    <p className="User_cur">Logged in as </p>
                 </div>
-                <div className="Home_PostBox">
-                    <p className="Post_Username">Lask1ey</p>
-                    <br/>
-                    <p className="Post">Random test asdknal s dasd s asd sadas das s s das sd sad asd as s as sd sd as as s 
-                     d s da s sa s d s  a aaaaaaaaaaaaaaaaaaaaaaaaaaa a  a a a a a a a a a a a aa a a a a a a
-                    </p>
-                </div>
+                {Object.entries(this.state.posts).map(([key,val], i) => {
+                    return (
+                        <div className="Home_PostBox">
+                            <p className="Post_Username">{val.postAuthor}</p>
+                            <br/>
+                            <p className="Post">{val.post[0]}</p>
+                        </div>
+                    )
+                })}
                 <div className="HomePage_NewPost">
                     <button className="MakePost"><Link to = '/post'>Make New Post</Link></button>
                 </div>
