@@ -8,6 +8,10 @@ html,body {
     font-family: sans-serif;
 }
 
+p {
+    margin: 0px 0px 0px 0px;
+}
+
 nav {
     height: 80px;
     width: auto;
@@ -166,88 +170,138 @@ a:hover {
 
 /* Signup CSS */
 
-/* .Container_SignUp{
+.Container_SignUp {
     position: relative;
     top: 25px;
     left: 110px;
     height: 692px;
     width: 1225px;
-} */
+}
 
 .UserName {
     position: relative;
     top: 140px;
     left: 143px;
-    width: 100px;
 }
 
 .Username_input {
     position: relative;
-    left: 143px;
     top: 150px;
+    left: 143px;
 }
 
 .Email {
     position: relative;
+    top: 200px;
     left: 143px;
-    top: 261px;
-    width: 100px;
 }
 
 .Email_input {
     position: relative;
+    top: 210px;
     left: 143px;
-    top: 271px;
 }
 
 .Password {
     position: relative;
+    top: 260px;
     left: 143px;
-    top: 384px;
-    width: 100px;
 }
 
 .Password_input {
     position: relative;
+    top: 270px;
     left: 143px;
-    top: 394px;
 }
 
 .Twitch {
     position: relative;
-    top: 140px;
-    left: 719px;
-    width: 100px;
+    top: 320px;
+    left: 143px;
 }
 
 .Twitch_input {
     position: relative;
-    top: 150px;
-    left: 719px;
+    top: 330px;
+    left: 143px;
 }
 
 .Youtube {
     position: relative;
-    top: 261px;
-    left: 719px;
-    width: 100px;
+    top: 380px;
+    left: 143px;
 }
 
 .Youtube_input {
     position: relative;
-    top: 271px;
-    left: 719px;
+    top: 390px;
+    left: 143px;
 }
 
 .Game {
     position: relative;
-    top: 384px;
-    left: 719px;
-    width: 100px;
+    top: 440px;
+    left: 143px;
 }
 
 .Game_input {
     position: relative;
-    top: 394px;
-    left: 719px;
+    top: 450px;
+    left: 143px;
+}
+
+.Button_signUp {
+    position: relative;
+    top: 53px;
+    left: 518px;
+    height: 50px;
+    width: 95px;
+}
+
+.SignUp_Text {
+    position: relative;
+    top: 50px;
+    left: 518px;
+}
+
+
+/* login CSS */
+
+.Container_login {
+    position: relative;
+    top: 25px;
+    left: 110px;
+    height: 692px;
+    width: 1225px;
+}
+
+.Email_login {
+    position: relative;
+    top: 145px;
+    left: 209px;
+}
+
+.Email_login_input {
+    position: relative;
+    top: 155px;
+    left: 209px;
+}
+
+.Pass_login {
+    position: relative;
+    top: 185px;
+    left: 209px;
+}
+.Pass_login_input {
+    position: relative;
+    top: 195px;
+    left: 209px;
+}
+
+.button_login {
+    position: relative;
+    top: 265px;
+    left: 38px;
+    width: 140px;
+    height: 42px;
 }

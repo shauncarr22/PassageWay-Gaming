@@ -10,8 +10,12 @@ class Login extends Component {
 
     render(){
         return(
-            <div>
-                <h1>Login</h1>
+            <div className="Container_login">
+                <p className="Email_login">Email</p>
+                <input className="Email_login_input"></input>
+                <p className="Pass_login">Password</p>
+                <input className="Pass_login_input"></input>
+                <button className="button_login">Login uwu</button>
             </div>
         );
     };
