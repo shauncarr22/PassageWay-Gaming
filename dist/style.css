@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
-body {
+html,body {
     font-family: sans-serif;
 }
 
@@ -141,6 +141,7 @@ a:hover {
 
 /* Post CSS */
 
+
 .Input_Box {
     background: #c4c4c4;
     position: relative;
@@ -165,10 +166,19 @@ a:hover {
 
 /* Signup CSS */
 
+/* .Container_SignUp{
+    position: relative;
+    top: 25px;
+    left: 110px;
+    height: 692px;
+    width: 1225px;
+} */
+
 .UserName {
     position: relative;
     top: 140px;
     left: 143px;
+    width: 100px;
 }
 
 .Username_input {
@@ -181,6 +191,7 @@ a:hover {
     position: relative;
     left: 143px;
     top: 261px;
+    width: 100px;
 }
 
 .Email_input {
@@ -193,6 +204,7 @@ a:hover {
     position: relative;
     left: 143px;
     top: 384px;
+    width: 100px;
 }
 
 .Password_input {
@@ -205,6 +217,7 @@ a:hover {
     position: relative;
     top: 140px;
     left: 719px;
+    width: 100px;
 }
 
 .Twitch_input {
@@ -217,6 +230,7 @@ a:hover {
     position: relative;
     top: 261px;
     left: 719px;
+    width: 100px;
 }
 
 .Youtube_input {
@@ -229,6 +243,7 @@ a:hover {
     position: relative;
     top: 384px;
     left: 719px;
+    width: 100px;
 }
 
 .Game_input {
