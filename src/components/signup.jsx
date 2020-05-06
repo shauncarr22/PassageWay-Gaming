@@ -1,20 +1,14 @@
-import React, {Component} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
+import { AuthContext } from '../AuthContext.jsx';
+import { useHistory } from 'react-router-dom';
+import firebase from '../firebase';
+import Axios from 'axios';
 
-class Signup extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
+const Signup = () => {
+    
+}
 
-        };
-    };
 
-    render(){
-        return(
-            <div>
-                <h1>Sign up</h1>
-            </div>
-        );
-    };
-};
+
 
 export default Signup
