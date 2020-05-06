@@ -20,7 +20,7 @@ class App extends Component {
                 <Route exact path = "/" component={HomePage}/>
                 <Route path = "/profile" component={Player}/>
                 <Route path = '/login' component={Login}/>
-                <Route path = '/register' component={Signup}/>
+                <Route path = '/signup' component={Signup}/>
                 <Route path = '/post' component={Post}/>
             </BrowserRouter>
         );

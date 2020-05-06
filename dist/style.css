@@ -162,3 +162,77 @@ a:hover {
     top: 16px;
     padding: 15px 15px;
 }
+
+/* Signup CSS */
+
+.UserName {
+    position: relative;
+    top: 140px;
+    left: 143px;
+}
+
+.Username_input {
+    position: relative;
+    left: 143px;
+    top: 150px;
+}
+
+.Email {
+    position: relative;
+    left: 143px;
+    top: 261px;
+}
+
+.Email_input {
+    position: relative;
+    left: 143px;
+    top: 271px;
+}
+
+.Password {
+    position: relative;
+    left: 143px;
+    top: 384px;
+}
+
+.Password_input {
+    position: relative;
+    left: 143px;
+    top: 394px;
+}
+
+.Twitch {
+    position: relative;
+    top: 140px;
+    left: 719px;
+}
+
+.Twitch_input {
+    position: relative;
+    top: 150px;
+    left: 719px;
+}
+
+.Youtube {
+    position: relative;
+    top: 261px;
+    left: 719px;
+}
+
+.Youtube_input {
+    position: relative;
+    top: 271px;
+    left: 719px;
+}
+
+.Game {
+    position: relative;
+    top: 384px;
+    left: 719px;
+}
+
+.Game_input {
+    position: relative;
+    top: 394px;
+    left: 719px;
+}
