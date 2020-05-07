@@ -40,11 +40,29 @@ const Login = () => {
                     <img className="Logo_login" src='LogoNew.png' alt=""></img>
 
                 <div className="Container_login">
+
                     <p className="Email_login">Email</p>
-                    <input className="Email_login_input"></input>
+
+                    <input className="Email_login_input"
+                        name="email"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={e => setEmail(e.eventPhase.target)}
+                    ></input>
+
                     <p className="Pass_login">Password</p>
-                    <input className="Pass_login_input"></input>
-                    <button className="button_login">Login uwu</button>
+
+                    <input className="Pass_login_input"
+                        name="password"
+                        value={password}
+                        onClick={e => setPassword(e.target.value)}
+                    ></input>
+
+                    <button className="button_login"
+                        onClick={e => authenticater(email,password)}
+                    >Login</button>
                 </div>
             </div> 
         )
