@@ -12,7 +12,7 @@ class HomePage extends Component {
 
 
     componentDidMount(){
-        Axios.get('https://passageway-gaming.herokuapp.com/getPost')
+        Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
         .then((data) => {
             this.setState({posts: data.data})
             console.log(this.state.posts)
