@@ -2,6 +2,9 @@
   "name": "general_reacting",
   "version": "1.0.0",
   "description": "donuts, cats, react, and such",
+  "engines": {
+    "node": "12.16.2"
+  },
   "main": "app.js",
   "scripts": {
     "build": "webpack -p",
