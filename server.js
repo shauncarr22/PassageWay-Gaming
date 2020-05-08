@@ -2,8 +2,9 @@ const express = require('express');
 const password = require('./mongoConfig');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
-const app = express();
+const player = require('./db/seeds/players.js')
 
+const app = express();
 
 const port = 5000;
 
@@ -17,6 +18,22 @@ app.get('/getPost', (req,res) => {
             if(err) console.error(err);
             res.send(result)
         });
+    });
+});
+
+app.post('/profileCreate', (req,res) => {
+    MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
+        if(err) console.error(err);
+        const {username, email,twitch,youtube,gameCur} = req.body
+        const profile = new player ({
+            username,
+            email,
+            twitch,
+            youtube,
+            gameCur
+        })
+        profile.save();
+        res.send('User created')
     });
 });
 

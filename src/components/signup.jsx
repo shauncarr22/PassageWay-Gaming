@@ -80,9 +80,17 @@ const Signup = () => {
             .then(() => {
                 setTimeout(() => {
                     let user = firebase.auth.currentUser.uid
-                    let URL = `https://passageway-gaming.herokuapp.com/`
-                })
-            })
+                    let URL = `https://passageway-gaming.herokuapp.com/profileCreate`
+                    Axios.post(URL, {
+                        username: username,
+                        email: email,
+                        twitch: twitch,
+                        youtube: youtube,
+                        gameCur: game
+                    });
+                    loggedIn(user)
+                }, 2000);
+            });
     };
 
     return(

@@ -6,12 +6,12 @@ const postSchema = new mongoose.Schema({
     datePosted: {type: Date}
 });
 
-const post = mongoose.model('post', postSchema);
+module.exports = mongoose.model('post', postSchema);
 
-const newPost = new post({
-    postAuthor: 'lask1ey',
-    post: ["Black Clover is a dumpster fire of an anime. Too bad I cant look away"],
-    datePosted: new Date
-})
+// const newPost = new post({
+//     postAuthor: 'lask1ey',
+//     post: ["Black Clover is a dumpster fire of an anime. Too bad I cant look away"],
+//     datePosted: new Date
+// })
 
-module.exports = newPost
+// module.exports = newPost
