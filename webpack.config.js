@@ -18,7 +18,16 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
-      }
+      },
+      {
+        test: /npm\.js$/,
+        loader: 'string-replace-loader',
+        include: path.resolve('node_modules/firebaseui/dist'),
+        options: {
+          search: 'require(\'firebase/app\');',
+          replace: 'require(\'firebase/app\').default;',
+        },
+      },
     ]
   },
   devServer: {
