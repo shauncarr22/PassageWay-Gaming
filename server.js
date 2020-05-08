@@ -3,12 +3,16 @@ const password = require('./mongoConfig');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 const player = require('./db/seeds/players.js')
+const cors = require('cors');
+const BodyParser = require('body-parser');
 
 const app = express();
 
 const port = 5000;
 
 app.use(express.static('dist'));
+app.use(cors());
+app.use(BodyParser.json());
 
 app.get('/getPost', (req,res) => {
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
