@@ -102,7 +102,7 @@ const Signup = () => {
                     type="text" 
                     name="username"
                     value={username}
-                    onChange={e => setUserName(e.target.value)}
+                    onChange={event => setUserName(event.target.value)}
                 ></input>
 
                 <p className="Email">Email</p>
@@ -111,7 +111,7 @@ const Signup = () => {
                     type="text" 
                     name="email"
                     value={email}
-                    onChange={e => setUpEmail(e.target.value)}
+                    onChange={event => setUpEmail(event.target.value)}
                 ></input>
 
                 <p className="Password">Password</p>
@@ -121,7 +121,7 @@ const Signup = () => {
                     name="password"
                     value={password}
                     onFocus={() => setVaildClass("password-requirment-active")}
-                    onChange={e => setUpPassword(e.target.value)}
+                    onChange={event => setUpPassword(event.target.value)}
                 ></input>
 
             </div>
@@ -132,7 +132,7 @@ const Signup = () => {
                     type='text' 
                     name='twitch'
                     value={twitch}
-                    onChange={e => setTwitch(e.target.value)}
+                    onChange={event => setTwitch(event.target.value)}
                 ></input>
 
                 <p className="Youtube">Youtube</p>
@@ -141,7 +141,7 @@ const Signup = () => {
                     type="text"
                     name="youtube"
                     value={youtube}
-                    onChange={e => setYoutube(e.target.value)}
+                    onChange={event => setYoutube(event.target.value)}
                 ></input>
 
                 <p className="Game">Game currently playing</p>
@@ -150,7 +150,7 @@ const Signup = () => {
                     type='text'
                     name="game"
                     value={game}
-                    onChange={e => setGame(e.target.value)}
+                    onChange={event => setGame(event.target.value)}
                 ></input>
 
                 <p className="SignUp_Text">Sign Up UwU</p>
