@@ -12,7 +12,7 @@ class HomePage extends Component {
 
 
     componentDidMount(){
-        Axios.get('http://localhost:3000/getPost')
+        Axios.get('https://laskbot.herokuapp.com/getPost')
         .then((data) => {
             this.setState({posts: data.data})
             console.log(this.state.posts)

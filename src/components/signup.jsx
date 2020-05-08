@@ -80,7 +80,7 @@ const Signup = () => {
             .then(() => {
                 setTimeout(() => {
                     let user = firebase.auth.currentUser.uid
-                    let URL = null
+                    let URL = `https://passageway-gaming.herokuapp.com/`
                 })
             })
     };
