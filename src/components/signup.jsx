@@ -3,6 +3,7 @@ import { AuthContext } from '../AuthContext.jsx';
 import { useHistory } from 'react-router-dom';
 import firebase from '../firebase';
 import Axios from 'axios';
+import { response } from 'express';
 
 const Signup = () => {
 
@@ -87,7 +88,10 @@ const Signup = () => {
                 twitch: twitch,
                 youtube: youtube,
                 gameCur: game
-              });
+              })
+              .then((response) => {
+                  console.log(response)
+              })
               window.alert("Accouant created, please move to login screen")
             }, 20);
           })
