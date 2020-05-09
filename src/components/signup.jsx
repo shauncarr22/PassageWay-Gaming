@@ -3,7 +3,7 @@ import { AuthContext } from '../AuthContext.jsx';
 import { useHistory } from 'react-router-dom';
 import firebase from '../firebase';
 import Axios from 'axios';
-import { response } from 'express';
+
 
 const Signup = () => {
 
@@ -80,17 +80,15 @@ const Signup = () => {
         regStatus
           .then(() => {
             setTimeout(() => {
-            //   let user = firebase.auth.currentUser.uid;
-              let URL =  `https://passageway-gaming.herokuapp.com/profileCreate/`
+                // let user = firebase.auth.currentUser.uid;
+                let URL =  `https://passageway-gaming.herokuapp.com/profileCreate/`
+                // let URL = "http://localhost:5000/profileCreate"
               Axios.post(URL, {
                 username: username,
                 email: email,
                 twitch: twitch,
                 youtube: youtube,
                 gameCur: game
-              })
-              .then((response) => {
-                  console.log(response)
               })
               window.alert("Accouant created, please move to login screen")
             }, 20);

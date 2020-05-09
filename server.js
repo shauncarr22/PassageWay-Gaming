@@ -2,7 +2,7 @@ const express = require('express');
 const password = require('./mongoConfig');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
-const player = require('./db/seeds/players.js')
+const player = require('./db/seeds/players')
 const cors = require('cors');
 const BodyParser = require('body-parser');
 
@@ -26,6 +26,7 @@ app.get('/getPost', (req,res) => {
 });
 
 app.post('/profileCreate', (req,res) => {
+    console.log(req.body)
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
         const {username, email,twitch,youtube,gameCur} = req.body
