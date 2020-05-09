@@ -41,8 +41,8 @@ const Signup = () => {
 
     const checkEmail = (email) => {
         email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/g)
-        ? setValidEmail("valid")
-        : setValidEmail("invalid");
+        ? setVaildEmail("valid")
+        : setVaildEmail("invalid");
     };
 
     const validatePassword = (password, lower, upper, number, len) => {
