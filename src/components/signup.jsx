@@ -54,19 +54,19 @@ const Signup = () => {
         upper === "invalid" &&
         number === "invalid" &&
         len === "invalid"
-        ? setStrongPW(false)
-        : setStrongPW(true);
+        ? setStrongPass(false)
+        : setStrongPass(true);
     };
 
     const checkSame = (password, rePassword) => {
         password === rePassword && (password !== "" || rePassword !== "")
-        ? setSame("valid")
-        : setSame("invalid");
+        ? setIsSame("valid")
+        : setIsSame("invalid");
     };
       const formComplete = (validEmail, isStrong, isSame) => {
         validEmail === "valid" && isStrong === true && isSame === "valid"
-        ? setSignUpComplete(true)
-        : setSignUpComplete(false);
+        ? setSignUpCom(true)
+        : setSignUpCom(false);
     };
 
     const handleCreateUser = (userNametoSend, emailToSend, passwordToSend) => {

@@ -27,7 +27,6 @@ export default class AuthContextProvider extends Component {
     };
 
     render(){
-        debugger
         return(
             <AuthContext.Provider
                 value = {{

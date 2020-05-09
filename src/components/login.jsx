@@ -46,7 +46,6 @@ const Login = () => {
                     <input className="Email_login_input"
                         name="email"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        type="email"
                         required
                         value={email}
                         onChange={e => setEmail(e.eventPhase.target)}
