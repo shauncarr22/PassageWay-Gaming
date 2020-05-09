@@ -69,28 +69,31 @@ const Signup = () => {
         : setSignUpCom(false);
     };
 
-    const handleCreateUser = (userNametoSend, emailToSend, passwordToSend) => {
-        localStorage.setItem("username", userNametoSend);
-        const regStatus = new Promise ((resovle, reject) => {
-            firebase.signOut();
-            loggedOut();
-            resovle(firebase.register(userNametoSend, emailToSend, passwordToSend));
+    const handleCreateUser = (userNameToSend, emailToSend, passswordToSend) => {
+        localStorage.setItem("username", userNameToSend);
+        const regStatus = new Promise((resolve, reject) => {
+          firebase.signOut();
+          loggedOut();
+          resolve(firebase.register(userNameToSend, emailToSend, passswordToSend));
         });
         regStatus
-            .then(() => {
-                setTimeout(() => {
-                    let user = firebase.auth.currentUser.uid
-                    let URL = `https://passageway-gaming.herokuapp.com/profileCreate`
-                    Axios.post(URL, {
-                        username: username,
-                        email: email,
-                        twitch: twitch,
-                        youtube: youtube,
-                        gameCur: game
-                    });
-                    loggedIn(user)
-                }, 2000);
-            });
+          .then(() => {
+            setTimeout(() => {
+              let user = firebase.auth.currentUser.uid;
+              let URL =  `https://passageway-gaming.herokuapp.com/profileCreate`
+              Axios.post(URL, {
+                username: username,
+                email: email,
+                twitch: twitch,
+                youtube: youtube,
+                gameCur: game
+              });
+              loggedIn(user);
+            }, 2000);
+          })
+          .catch(error => {
+            console.error(error.message);
+          });
     };
 
     return(
@@ -177,3 +180,7 @@ const Signup = () => {
 
 
 export default Signup
+
+
+
+
