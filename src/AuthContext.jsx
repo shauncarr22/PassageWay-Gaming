@@ -23,7 +23,7 @@ export default class AuthContextProvider extends Component {
     };
 
     loggedOut(){
-        setCookie({isAuth: false, uid: null});
+        setCookie({isAuth: false, uid: ""});
     };
 
     render(){
