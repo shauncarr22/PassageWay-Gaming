@@ -82,14 +82,16 @@ const Signup = () => {
             setTimeout(() => {
                 // let user = firebase.auth.currentUser.uid;
                 let URL =  `https://passageway-gaming.herokuapp.com/profileCreate/`
-                // let URL = "http://localhost:5000/profileCreate"
-              Axios.post(URL, {
-                username: username,
-                email: email,
-                twitch: twitch,
-                youtube: youtube,
-                gameCur: game
-              })
+                Axios.post(URL, {
+                    username: username,
+                    email: email,
+                    twitch: twitch,
+                    youtube: youtube,
+                    gameCur: game
+                })
+                .then((res) => {
+                    console.log(res)
+                })
               window.alert("Accouant created, please move to login screen")
             }, 20);
           })
