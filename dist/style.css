@@ -214,6 +214,18 @@ a:hover {
     left: 143px;
 }
 
+.RePassword {
+    position: relative;
+    top: 280px;
+    left: 143px;
+}
+
+.RePassword_input {
+    position: relative;
+    top: 290px;
+    left: 143px;
+}
+
 .Twitch {
     position: relative;
     top: 320px;

@@ -124,6 +124,14 @@ const Signup = () => {
                     onChange={event => setUpPassword(event.target.value)}
                 ></input>
 
+                <p className="RePassword">Retype Password</p>
+
+                <input className="RePassword_input"
+                    type="text"
+                    value={rePassword}
+                    onChange={event => setRePassword(event.target.value)}
+                ></input>
+
             </div>
             <div>
                 <p className="Twitch">Twitch</p>
@@ -150,7 +158,7 @@ const Signup = () => {
                     type='text'
                     name="game"
                     value={game}
-                    onChange={event => setGame(eve.target.value)}
+                    onChange={event => setGame(event.target.value)}
                 ></input>
 
                 <p className="SignUp_Text">Sign Up UwU</p>
