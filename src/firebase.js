@@ -13,7 +13,7 @@ class firebase {
     };
 
     signOut(){
-        return this.signOut()
+        return this.auth.signOut()
     };
 
     register(name,email,password){

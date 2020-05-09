@@ -70,6 +70,7 @@ const Signup = () => {
     };
 
     const handleCreateUser = (userNameToSend, emailToSend, passswordToSend) => {
+        debugger
         localStorage.setItem("username", userNameToSend);
         const regStatus = new Promise((resolve, reject) => {
           firebase.signOut();
