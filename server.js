@@ -30,6 +30,7 @@ app.post('/profileCreate', (req,res) => {
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
         const {username, email,twitch,youtube,gameCur} = req.body
+        const db = client.db('test')
         const profile = new player ({
             username,
             email,
@@ -37,8 +38,12 @@ app.post('/profileCreate', (req,res) => {
             youtube,
             gameCur
         })
-        profile.save();
-        res.send('User created')
+        db.collection('players').insertOne(profile, (err) => {
+            if(err) console.error(err);
+            res.send('user created')
+        })
+        //profile.save();
+        // res.send('User created')
     });
 });
 
