@@ -150,7 +150,7 @@ const Signup = () => {
                     type='text'
                     name="game"
                     value={game}
-                    onChange={event => setGame(event.target.value)}
+                    onChange={event => setGame(eve.target.value)}
                 ></input>
 
                 <p className="SignUp_Text">Sign Up UwU</p>

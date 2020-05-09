@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
+import AuthContextProvider from './AuthContext'
 import HomePage from './components/homepage.jsx'
 import Player from './components/player.jsx'
 import NavBar from './components/navbar.jsx'
@@ -15,6 +16,7 @@ class App extends Component {
     };
     render() {
         return (
+            <AuthContextProvider>
             <BrowserRouter>
                 <NavBar/>
                 <Route exact path = "/" component={HomePage}/>
@@ -23,6 +25,7 @@ class App extends Component {
                 <Route path = '/signup' component={Signup}/>
                 <Route path = '/post' component={Post}/>
             </BrowserRouter>
+            </AuthContextProvider>
         );
     };
 };

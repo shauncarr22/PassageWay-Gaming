@@ -1,4 +1,4 @@
-import React, { Component, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 import firebase from '../firebase';
 import { AuthContext } from '../AuthContext.jsx'

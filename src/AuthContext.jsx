@@ -27,6 +27,7 @@ export default class AuthContextProvider extends Component {
     };
 
     render(){
+        console.log(isAuth)
         return(
             <AuthContext.Provider
                 value = {{
@@ -41,3 +42,5 @@ export default class AuthContextProvider extends Component {
     };
 
 };
+
+export default AuthContextProvider
