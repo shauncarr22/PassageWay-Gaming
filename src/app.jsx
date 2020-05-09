@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import AuthContextProvider from './AuthContext'
+import AuthContextProvider from './AuthContext.jsx'
 import HomePage from './components/homepage.jsx'
 import Player from './components/player.jsx'
 import NavBar from './components/navbar.jsx'
