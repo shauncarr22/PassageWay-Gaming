@@ -70,7 +70,6 @@ const Signup = () => {
     };
 
     const handleCreateUser = (userNameToSend, emailToSend, passswordToSend) => {
-        debugger
         localStorage.setItem("username", userNameToSend);
         const regStatus = new Promise((resolve, reject) => {
           firebase.signOut();
@@ -80,8 +79,8 @@ const Signup = () => {
         regStatus
           .then(() => {
             setTimeout(() => {
-              let user = firebase.auth.currentUser.uid;
-              let URL =  `https://passageway-gaming.herokuapp.com/profileCreate`
+            //   let user = firebase.auth.currentUser.uid;
+              let URL =  `https://passageway-gaming.herokuapp.com/profileCreate/`
               Axios.post(URL, {
                 username: username,
                 email: email,
@@ -89,8 +88,8 @@ const Signup = () => {
                 youtube: youtube,
                 gameCur: game
               });
-              loggedIn(user);
-            }, 2000);
+              window.alert("Accouant created, please move to login screen")
+            }, 20);
           })
           .catch(error => {
             console.error(error.message);
