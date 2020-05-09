@@ -42,5 +42,3 @@ export default class AuthContextProvider extends Component {
     };
 
 };
-
-export default AuthContextProvider
