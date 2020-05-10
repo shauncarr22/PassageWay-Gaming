@@ -26,10 +26,10 @@ const Login = () => {
                 let info = firebase.auth.currentUser.uid
                 console.log(info)
                 loggedIn(info)
-            }).catch(error => {
-                console.error(error);
-                error.code === "auth/user-not-found" ? setEmailClass("email-error") : setEmailClass("email");
-                error.code === "auth/wrong-password" ? setPwClass('password-error') : setPwClass('password');
+            }).catch(err => {
+                console.error(err);
+                err.code === "auth/user-not-found" ? setEmailClass("email-error") : setEmailClass("email");
+                err.code === "auth/wrong-password" ? setPwClass('password-error') : setPwClass('password');
             });
         };
     };
