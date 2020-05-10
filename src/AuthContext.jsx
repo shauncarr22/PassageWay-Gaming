@@ -4,25 +4,29 @@ import { setCookie, getCookie } from './components/cookies';
 export const AuthContext = createContext(getCookie());
 
 export default class AuthContextProvider extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            isAuth: false,
-            uid: ""
-        };
-       
-    };
+   
+    state = {
+        isAuth: false,
+        uid: ""
+    }
+        
+        
+
 
     componentDidMount(){
         this.setState(setCookie());
     };
 
-    loggedIn(uid){
-        this.setState({isAuth: true, uid: uid});
+    loggedIn = uid => {
+        if(uid === undefined || uid === null){
+            this.setState({isAuth: true, uid: "Anon"})
+        } else {
+            this.setState({isAuth: true, uid: uid});
+        }
         setCookie(this.state);
-    };
+    }
 
-    loggedOut(){
+    loggedOut = () => {
         setCookie({isAuth: false, uid: ""});
     };
 

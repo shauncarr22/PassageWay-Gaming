@@ -18,15 +18,17 @@ const Login = () => {
     const [newUser,setNewUserStatus] = useState(false);
 
     const authenticater = (email, password) => {
+        // e.preventDefault()
         if(email.length > 0 && password.length > 0){
             let prom = new Promise ((resolve, reject) => {
                 resolve(firebase.login(email,password))
             })
             prom.then(() => {
                 let info = firebase.auth.currentUser.uid
-                console.log(info)
                 loggedIn(info)
-            }).catch(err => {
+                console.log(info)
+            })
+            .catch((err) => {
                 console.error(err);
                 err.code === "auth/user-not-found" ? setEmailClass("email-error") : setEmailClass("email");
                 err.code === "auth/wrong-password" ? setPwClass('password-error') : setPwClass('password');
