@@ -19,7 +19,7 @@ export default class AuthContextProvider extends Component {
 
     loggedIn(uid){
         this.setState({isAuth: true, uid: uid});
-        setCookie(this.setState);
+        setCookie(this.state);
     };
 
     loggedOut(){

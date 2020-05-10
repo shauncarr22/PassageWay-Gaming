@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
+const BodyParser = require('body-parser');
+
 const password = require('./mongoConfig');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 const player = require('./db/seeds/players')
-const cors = require('cors');
-const BodyParser = require('body-parser');
+const post = require('./db/seeds/post')
 
 const app = express();
 
@@ -25,12 +27,28 @@ app.get('/getPost', (req,res) => {
     });
 });
 
+app.post('/newpost',(req,res) => {
+    MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
+        if(err) console.error(err);
+        const {username,post} = req.body;
+        const db = client.db('test');
+        const newPost = post ({
+            username,
+            post
+        });
+        db.collection('posts').insertOne(newPost,(err) => {
+            if(err) console.error(err);
+            res.send('Post Created')
+        });
+    });
+});
+
 app.post('/profileCreate', (req,res) => {
     console.log(req.body)
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
-        const {username, email,twitch,youtube,gameCur} = req.body
-        const db = client.db('test')
+        const {username, email,twitch,youtube,gameCur} = req.body;
+        const db = client.db('test');
         const profile = new player ({
             username,
             email,

@@ -24,6 +24,7 @@ const Login = () => {
             })
             prom.then(() => {
                 let info = firebase.auth.currentUser.uid
+                console.log(info)
                 loggedIn(info)
             }).catch(error => {
                 console.error(error);
@@ -48,7 +49,7 @@ const Login = () => {
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         required
                         value={email}
-                        onChange={e => setEmail(e.eventPhase.target)}
+                        onChange={e => setEmail(e.target.value)}
                     ></input>
 
                     <p className="Pass_login">Password</p>
@@ -56,11 +57,11 @@ const Login = () => {
                     <input className="Pass_login_input"
                         name="password"
                         value={password}
-                        onClick={e => setPassword(e.target.value)}
+                        onChange={e => setPassword(e.target.value)}
                     ></input>
 
                     <button className="button_login"
-                        onClick={e => authenticater(email,password)}
+                        onClick={() => authenticater(email,password)}
                     >Login</button>
                 </div>
             </div> 

@@ -16,9 +16,7 @@ class Post extends Component {
 
     handleClick(e){
         e.preventDefault()
-        console.log(':O ive been clicked');
-        console.log(`this is the current state ${this.state.post}`);
-        window.alert('please dont do that yet... thanks :)');
+        
     };
 
     render(){
