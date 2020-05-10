@@ -26,7 +26,6 @@ const Login = () => {
             prom.then(() => {
                 let info = firebase.auth.currentUser.uid
                 loggedIn(info)
-                console.log(info)
             })
             .catch((err) => {
                 console.error(err);

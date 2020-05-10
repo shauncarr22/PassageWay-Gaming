@@ -11,7 +11,7 @@ const HomePage = () => {
     const { isAuth, loggedIn } = context;
     if(isAuth){
         let user = firebase.auth.currentUser.email
-        console.log(user)
+        console.log(user + "from homepage")
     };
 
     useEffect(() => {
@@ -19,7 +19,6 @@ const HomePage = () => {
         .then((data) => {
             //this.setState({posts: data.data})
             setPost(data.data)
-            console.log(post)
         });
     },[post])
           
