@@ -47,10 +47,10 @@ app.post('/profileCreate', (req,res) => {
     console.log(req.body)
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
-        const {username, email,twitch,youtube,gameCur} = req.body;
+        const {userName, email,twitch,youtube,gameCur} = req.body;
         const db = client.db('test');
         const profile = new player ({
-            username,
+            userName,
             email,
             twitch,
             youtube,
