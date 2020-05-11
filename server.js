@@ -34,7 +34,7 @@ app.get('/getPost', (req,res) => {
     });
 });
 
-app.post('/newPost',(req,res) => {
+app.post('/newPost', cors(), (req,res) => {
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
         const {post,userName} = req.body;
