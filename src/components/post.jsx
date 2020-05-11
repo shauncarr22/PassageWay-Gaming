@@ -42,8 +42,8 @@ const Post = () => {
         e.preventDefault()
         let URL = 'https://passageway-gaming.herokuapp.com/newPost'
         Axios.post(URL, {
-            post: post,
-            userName: user
+            userName: user,
+            post: post
         })
         .then((res) => {
             console.log(res)
