@@ -9,11 +9,11 @@ const LoggedHomePage = () => {
     
     const [posts, setPosts] = useState('');
     const [user, setUser] = useState('');
-    const [userEmail, setEmail] = useState('');
+    const [email, setEmail] = useState('');
 
     let reRoute = useHistory();
     const context = useContext(AuthContext);
-    const { isAuth, email } = context;
+    const { isAuth, uid } = context;
 
     
 
@@ -26,10 +26,10 @@ const LoggedHomePage = () => {
         getPost()
     },[user])
 
-    const getUser = (email) => {
-        console.log(email);
+    const getUser = (userEmail) => {
+        console.log(userEmail);
         setEmail('laskey@gmail.com')
-        Axios.get(`https://passageway-gaming.herokuapp.com/getPost/${userEmail}/`)
+        Axios.get(`https://passageway-gaming.herokuapp.com/getPost/${email}/`)
         .then((data) => {
             console.log(data.data);
         })
