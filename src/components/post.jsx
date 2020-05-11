@@ -1,35 +1,57 @@
-import React, {Component} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import Axios from 'axios';
+import { Redirect, useHistory } from 'react-router-dom';
+import firebase from '../firebase';
+import { AuthContext } from '../AuthContext.jsx'
 
-class Post extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            post: null
-        };
+const Post = () => {
+  
+    const [post, setPost] = useState([]);
+    const [email, setEmail] = useState('');
+    const [user, setUser] = useState('');
+
+    let reRoute = useHistory();
+    const context = useContext(AuthContext);
+    const { isAuth, uid } = context;
+
+    if(!isAuth) reRoute.push('/')
+
+    useEffect(() => {
+        const currentUser = firebase.auth.currentUser.email
+        checkUser(currentUser)
+    }, [uid])
+
+    const checkUser = (userEmail) => {
+        let URL = `https://passageway-gaming.herokuapp.com/getUser/`
+        Axios.get(URL)
+        .then((data) => {
+            let findUser = data.data
+            console.log(findUser[0].email);
+            for(let i = 0; i < findUser.length; i++) {
+                if(findUser[i].email === userEmail){
+                    setUser(findUser[i].userName)
+                    return;
+                };
+            };
+        });
+        console.log(user)
+        return;
     };
 
-    handleChange(e){
-        //console.log(e.target.value)
-        this.setState({post: e.target.value})
+    const sumbitPost = (post) => {
+        console.log(post)
     };
-
-    handleClick(e){
-        e.preventDefault()
-        
-    };
-
-    render(){
-        return(
-            <div className="Input_Box">
-                <form>
-                    <textarea className="Input" rows='10' cols='75' onChange={this.handleChange.bind(this)}></textarea>
-                    <br/>
-                    <button className="Sumbit_Post" onClick={this.handleClick.bind(this)}>Post It</button>
-                </form>
-            </div>
-        );
-    };
+    
+    return(
+        <div className="Input_Box">
+            <form>
+                <textarea className="Input" rows='10' cols='75' onChange={e => setPost(e.target.value)}></textarea>
+                <br/>
+                <button className="Sumbit_Post" onClick={() => sumbitPost(post)}>Post It</button>
+            </form>
+        </div>
+    );
+    
 };
 
 export default Post 

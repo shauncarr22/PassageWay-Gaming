@@ -20,8 +20,7 @@ const LoggedHomePage = () => {
     if(!isAuth) reRoute.push('/')
 
     useEffect(() => {
-       
-        const currentUser = firebase.auth.currentUser.email
+       const currentUser = firebase.auth.currentUser.email
         getUser(currentUser)
         getPost()
     },[user])
