@@ -40,7 +40,7 @@ const Post = () => {
 
     const sumbitPost = (e,post,user) => {
         e.preventDefault()
-        let URL = 'https://passageway-gaming.herokuapp.com/newPost/'
+        let URL = 'http://passageway-gaming.herokuapp.com/newPost/'
         Axios.post(URL, {
             post: post,
             userName: user
