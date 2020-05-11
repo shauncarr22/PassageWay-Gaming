@@ -29,17 +29,15 @@ const LoggedHomePage = () => {
     const getUser = (email) => {
         console.log(email);
         setEmail('laskey@gmail.com')
-        Axios.get(' https://passageway-gaming.herokuapp.com/getUser/', {
-            email: userEmail
-        })
+        Axios.get(`https://passageway-gaming.herokuapp.com/getPost/${userEmail}/`)
         .then((data) => {
-            console.log(data)
+            console.log(data.data);
         })
         return;
     };
 
     const getPost = () => {
-        Axios.get(' https://passageway-gaming.herokuapp.com/getPost/')
+        Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
         .then((data) => {
             setPosts(data.data)
         });
