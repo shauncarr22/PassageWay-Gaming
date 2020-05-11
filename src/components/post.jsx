@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import Axios from 'axios';
 import { Redirect, useHistory } from 'react-router-dom';
 import firebase from '../firebase';
