@@ -54,21 +54,19 @@ const LoggedHomePage = () => {
         
     return(
         <div className="Container">
-            <div className="HomePage_ProfileBox">
-                <p className="User_cur">Logged in as {user}</p>
+            <div className="LOG_HomePage_ProfileBox">
+                <p className="LOG_User_cur">Logged in as {user}</p>
             </div>
+            <button className="LOG_MakePost"><Link to = '/post'>Make New Post</Link></button>
             {Object.entries(posts).map(([key,val], i) => {
                 return (
-                    <div className="Home_PostBox" key={key}>
-                        <p className="Post_Username">{val.postAuthor}</p>
+                    <div className="LOG_Home_PostBox" key={key}>
+                        <p className="LOG_Post_Username">{val.postAuthor}</p>
                         <br/>
-                        <p className="Post">{val.post[0]}</p>
+                        <p className="LOG_Post">{val.post[0]}</p>
                     </div>
-                )
-            })}
-            <div className="HomePage_NewPost">
-                <button className="MakePost"><Link to = '/post'>Make New Post</Link></button>
-            </div>
+                );
+            })};
         </div>
     );
     
