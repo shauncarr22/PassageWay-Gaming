@@ -92,8 +92,8 @@ const Signup = () => {
                 .then((res) => {
                     console.log(res)
                 })
-              window.alert("Accouant created")
-            //   loggedIn(user)
+                reRoute.push('/login')
+                //loggedIn(user)
             }, 20);
           })
           .catch(error => {
