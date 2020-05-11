@@ -72,12 +72,12 @@ app.post('/profileCreate', (req,res) => {
     });
 });
 
-app.post(`/getUser`, (req,res) => {
+app.get(`/getUser`, (req,res) => {
     console.log(req.body)
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
         const db = client.db('test');
-        db.collection('players').findOne({email: req.body.email}).toArray((err,results) => {
+        db.collection('players').find().toArray((err,results) => {
             if(err) console.error(err);
             res.send(results)
         });
