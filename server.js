@@ -39,7 +39,7 @@ app.post('/newPost', cors(), (req,res) => {
         if(err) console.error(err);
         const {post,userName} = req.body;
         const db = client.db('test');
-        const newPost = post ({
+        const newPost = new post ({
             userName,
             post
         });
