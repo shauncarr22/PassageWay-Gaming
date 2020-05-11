@@ -7,6 +7,7 @@ import NavBar from './components/navbar.jsx'
 import Login from './components/login.jsx'
 import Signup from './components/signup.jsx'
 import Post from './components/post.jsx'
+import LoggedHomePage from './components/loggedinhome.jsx'
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
                 <Route exact path = "/" component={HomePage}/>
                 <Route path = "/profile" component={Player}/>
                 <Route path = '/login' component={Login}/>
+                <Route path = '/home' component={LoggedHomePage}/>
                 <Route path = '/signup' component={Signup}/>
                 <Route path = '/post' component={Post}/>
             </BrowserRouter>

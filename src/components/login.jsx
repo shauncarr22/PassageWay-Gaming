@@ -8,7 +8,9 @@ const Login = () => {
     const context = useContext(AuthContext);
     const { isAuth, loggedIn } = context;
 
-    if(isAuth) reRoute.push('/profile');
+    if(isAuth){
+        reRoute.push('/home');
+    };
 
     const [email,setEmail] = useState("");
     const [emailClass, setEmailClass] = useState('');
