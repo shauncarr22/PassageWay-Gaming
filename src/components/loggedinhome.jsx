@@ -33,7 +33,7 @@ const LoggedHomePage = () => {
         Axios.get(URL)
         .then((data) => {
             let findUser = data.data
-            console.log(findUser);
+            console.log(findUser[0].email);
         })
         return;
     };
