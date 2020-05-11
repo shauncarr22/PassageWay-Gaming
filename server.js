@@ -37,10 +37,10 @@ app.get('/getPost', (req,res) => {
 app.post('/newPost',(req,res) => {
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
-        const {username,post} = req.body;
+        const {post,userName} = req.body;
         const db = client.db('test');
         const newPost = post ({
-            username,
+            userName,
             post
         });
         db.collection('posts').insertOne(newPost,(err) => {
