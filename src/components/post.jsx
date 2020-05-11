@@ -38,8 +38,17 @@ const Post = () => {
         return;
     };
 
-    const sumbitPost = (post) => {
-        console.log(post)
+    const sumbitPost = (e,post,user) => {
+        e.preventDefault()
+        let URL = 'https://passageway-gaming.herokuapp.com/newPost/'
+        Axios.post(URL, {
+            post: post,
+            userName: user
+        })
+        .then((res) => {
+            console.log(res)
+        })
+        return;
     };
     
     return(
@@ -47,7 +56,7 @@ const Post = () => {
             <form>
                 <textarea className="Input" rows='10' cols='75' onChange={e => setPost(e.target.value)}></textarea>
                 <br/>
-                <button className="Sumbit_Post" onClick={() => sumbitPost(post)}>Post It</button>
+                <button className="Sumbit_Post" onClick={e => sumbitPost(e,post,user)}>Post It</button>
             </form>
         </div>
     );
