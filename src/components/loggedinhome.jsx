@@ -34,7 +34,13 @@ const LoggedHomePage = () => {
         .then((data) => {
             let findUser = data.data
             console.log(findUser[0].email);
-        })
+            for(let i = 0; i < findUser.length; i++) {
+                if(findUser[i].email === userEmail){
+                    setUser(findUser[i].userName)
+                    return;
+                };
+            };
+        });
         return;
     };
 
