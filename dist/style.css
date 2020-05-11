@@ -93,7 +93,7 @@ a:hover {
     width: 540px;
     height: 220px;
     top: 110px;
-    left: 15%;
+    left: 30%;
 }
 
 .Post_Username {
@@ -125,22 +125,24 @@ a:hover {
     top: 180px;
 }
 
-.HomePage_NewPost {
+/* .HomePage_NewPost {
     display: block;
     text-align: center;
     background: #c4c4c4;
     position: relative;
     width: 330px;
     height: 72px;
-    left: 34.6%;
+    left: 700px;
     top: 350px;
-}
+} */
 
 .MakePost {
     background: #c4c4c4;
     position: relative;
     font-size: large;
     padding: 13px 103px;
+    top: 350px ;
+    left: 780px;
 }
 
 /* Post CSS */

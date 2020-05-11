@@ -1,6 +1,6 @@
 const app = require('firebase');
 
-const config = require('./components/firebaseConfig.js');
+const config = require('./components/firebaseConfig');
 
 class firebase {
     constructor(){

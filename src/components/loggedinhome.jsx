@@ -7,42 +7,52 @@ import { AuthContext } from '../AuthContext.jsx'
 
 const LoggedHomePage = () => {
     
-    const [post, setPost] = useState('');
+    const [posts, setPosts] = useState('');
     const [user, setUser] = useState('');
-    const [email, setEmail] = useState('');
+    const [userEmail, setEmail] = useState('');
 
     let reRoute = useHistory();
     const context = useContext(AuthContext);
-    const { isAuth, loggedIn } = context;
-
-    if(isAuth){
-        getPost();
-        getUser();
-    } else {
-        reRoute.push('/login')
-    };
-
-
-    const getUser =() =>{
-        let currentUser = firebase.auth.currentUser.email
-        console.log(currentUser)
-    };
-
-    const getPost =() => {
-        Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
-        .then((data) => {
-            this.setState({posts: data.data})
-        });
-    };
+    const { isAuth, email } = context;
 
     
+
+    if(!isAuth) reRoute.push('/')
+
+    useEffect(() => {
+       
+        const currentUser = firebase.auth.currentUser.email
+        getUser(currentUser)
+        getPost()
+    },[user])
+
+    const getUser = (email) => {
+        console.log(email);
+        setEmail('laskey@gmail.com')
+        Axios.get(' https://passageway-gaming.herokuapp.com/getUser/', {
+            email: userEmail
+        })
+        .then((data) => {
+            console.log(data)
+        })
+        return;
+    };
+
+    const getPost = () => {
+        Axios.get(' https://passageway-gaming.herokuapp.com/getPost/')
+        .then((data) => {
+            setPosts(data.data)
+        });
+        return;
+    }
+ 
         
     return(
         <div className="Container">
             <div className="HomePage_ProfileBox">
-                <p className="User_cur">Logged in as {this.state.user}</p>
+                <p className="User_cur">Logged in as {user}</p>
             </div>
-            {Object.entries(this.state.posts).map(([key,val], i) => {
+            {Object.entries(posts).map(([key,val], i) => {
                 return (
                     <div className="Home_PostBox" key={key}>
                         <p className="Post_Username">{val.postAuthor}</p>
