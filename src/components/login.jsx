@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 import firebase from '../firebase';
 import { AuthContext } from '../AuthContext.jsx'
+import Logo from '../LogoNew.png'
+
 
 const Login = () => {
     let reRoute = useHistory();
@@ -41,7 +43,7 @@ const Login = () => {
     } else {
         return (
                 <div>
-                    <img className="Logo_login" src='LogoNew.png' alt=""></img>
+                    <img className="Logo_login" src={Logo} alt=""></img>
 
                 <div className="Container_login">
 

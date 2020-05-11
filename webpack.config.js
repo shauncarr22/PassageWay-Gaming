@@ -23,6 +23,18 @@ module.exports = {
         }
       },
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              regExp: /\/([a-z0-9]+)\/[a-z0-9]+\.png$/i,
+              name: '[1]-[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
         test: /npm\.js$/,
         loader: 'string-replace-loader',
         include: path.resolve('node_modules/firebaseui/dist'),

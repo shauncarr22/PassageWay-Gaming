@@ -287,10 +287,12 @@ a:hover {
 
 .Container_login {
     position: relative;
+    margin: 0px 0px;
+    padding: 0px 0px;
     top: 25px;
     left: 110px;
     height: 692px;
-    width: 1225px;
+    width: 500px;
 }
 
 .Email_login {
