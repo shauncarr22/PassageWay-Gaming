@@ -6,7 +6,7 @@ const password = require('./mongoConfig');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 const player = require('./db/seeds/players')
-const post = require('./db/seeds/post')
+const postNew = require('./db/seeds/post')
 
 const app = express();
 
@@ -37,10 +37,10 @@ app.get('/getPost', (req,res) => {
 app.post('/newPost', cors(), (req,res) => {
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
-        const {post,userName} = req.body;
+        const {post, postAuthor} = req.body;
         const db = client.db('test');
-        const newPost = new post ({
-            userName,
+        const newPost = new postNew ({
+            postAuthor,
             post
         });
         db.collection('posts').insertOne(newPost,(err) => {
