@@ -65,7 +65,7 @@ app.post('/profileCreate', (req,res) => {
     });
 });
 
-app.get(`/getUser/email`, (req,res) => {
+app.post(`/getUser`, (req,res) => {
     console.log(req.body)
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
