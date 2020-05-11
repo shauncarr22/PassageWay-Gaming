@@ -29,7 +29,7 @@ const LoggedHomePage = () => {
     const getUser = (userEmail) => {
         console.log(userEmail);
         setEmail('laskey@gmail.com')
-        Axios.post(`https://passageway-gaming.herokuapp.com/getUer/`, {
+        Axios.post(`https://passageway-gaming.herokuapp.com/getUser/`, {
             email: userEmail
         })
         .then((data) => {
