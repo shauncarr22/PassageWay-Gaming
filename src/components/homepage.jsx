@@ -17,8 +17,7 @@ class HomePage extends Component {
 
 
     getPost(){
-        // https://passageway-gaming.herokuapp.com/getPost/
-        Axios.get('http://localhost:5000/getPost')
+        Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
         .then((data) => {
             this.setState({posts: data.data})
         });
