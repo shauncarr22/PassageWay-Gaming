@@ -42,11 +42,8 @@ const Login = () => {
         return <Redirect push to="/signup"></Redirect>
     } else {
         return (
-                <div>
-                    <img className="Logo_login" src={Logo} alt=""></img>
-
+            <div className="wrapper_Login">
                 <div className="Container_login">
-
                     <p className="Email_login">Email</p>
 
                     <input className="Email_login_input"
@@ -69,9 +66,12 @@ const Login = () => {
                         onClick={() => authenticater(email,password)}
                     >Login</button>
                 </div>
-            </div> 
-        )
-    }
+                <div>
+                    <img className="Logo_login" src={Logo} alt=""></img>
+                </div>
+            </div>
+        );
+    };
 };
 
 export default Login

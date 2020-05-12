@@ -3,6 +3,7 @@ import { AuthContext } from '../AuthContext.jsx';
 import { useHistory } from 'react-router-dom';
 import firebase from '../firebase';
 import Axios from 'axios';
+import Logo from '../LogoNew.png'
 
 
 const Signup = () => {
@@ -102,8 +103,9 @@ const Signup = () => {
     };
 
     return(
-        <div className="Container_SignUp">
-            <div>
+        <div className="wrapper_Sign">
+            <div className="Container_SignUp">
+            
                 <p className="UserName">Username</p>
 
                 <input className="Username_input" 
@@ -140,8 +142,7 @@ const Signup = () => {
                     onChange={event => setRePassword(event.target.value)}
                 ></input>
 
-            </div>
-            <div>
+          
                 <p className="Twitch">Twitch</p>
 
                 <input className="Twitch_input" 
@@ -175,6 +176,9 @@ const Signup = () => {
                     onClick={() => handleCreateUser(username,email,password,twitch,youtube,game)}
                 >Finish</button>
 
+            </div>
+            <div>
+            <img className="logo_Sign" src={Logo} alt=""></img>
             </div>
         </div>
     );

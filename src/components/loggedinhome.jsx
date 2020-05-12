@@ -54,22 +54,40 @@ const LoggedHomePage = () => {
         
     return(
         <div className="Container">
-            <div className="LOG_HomePage_ProfileBox">
-                <p className="LOG_User_cur">Logged in as {user}</p>
+            <div>
+                {Object.entries(posts).map(([key,val], i) => {
+                    return (
+                        <div className="Home_PostBox" key={key}>
+                            <p className="Post_Username">{val.postAuthor}</p>
+                            <br/>
+                            <p className="Post">{val.post[0]}</p>
+                        </div>
+                    );
+                })};
             </div>
-            <button className="LOG_MakePost"><Link to = '/post'>Make New Post</Link></button>
-            {Object.entries(posts).map(([key,val], i) => {
-                return (
-                    <div className="LOG_Home_PostBox" key={key}>
-                        <p className="LOG_Post_Username">{val.postAuthor}</p>
-                        <br/>
-                        <p className="LOG_Post">{val.post[0]}</p>
-                    </div>
-                );
-            })};
+            <div className="HomePage_NewPost">
+                <p className="User_cur">Logged in as {user}</p>
+                <button className="MakePost"><Link to = '/login'>Log In To Post</Link></button>
+            </div>
         </div>
     );
     
 };
 
 export default LoggedHomePage
+
+{/* <div className="Container">
+<div className="HomePage_ProfileBox">
+    <p className="User_cur">Logged in as {user}</p>
+</div>
+<button className="MakePost"><Link to = '/post'>Make New Post</Link></button>
+{Object.entries(posts).map(([key,val], i) => {
+    return (
+        <div className="Home_PostBox" key={key}>
+            <p className="Post_Username">{val.postAuthor}</p>
+            <br/>
+            <p className="Post">{val.post[0]}</p>
+        </div>
+    );
+})};
+</div> */}

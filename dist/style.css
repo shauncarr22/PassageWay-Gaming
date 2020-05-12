@@ -47,6 +47,12 @@ a:hover {
     font-size: 20px;
 }
 
+.logo_img {
+    position: relative;
+    top: -15px;
+    height: 70px;
+    width: 70px;
+}
 
 /* Desktop view */
 @media all and (min-width: 768px) {
@@ -83,9 +89,18 @@ a:hover {
 
 /* HomePage CSS */
 
-/* .Container {
-    display: flex;
-} */
+.Container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.Container > div {
+    background:white;
+}
+
+.Container > div:nth-child(odd){
+    background:white;
+}
 
 .Home_PostBox {
     background: #c4c4c4;
@@ -97,7 +112,7 @@ a:hover {
     margin-bottom: 10px;
     width: 540px;
     height: 220px;
-    left: 40%;
+    left: 30%;
 }
 
 .Post_Username {
@@ -125,20 +140,10 @@ a:hover {
 
 .User_cur {
     position: relative;
-    text-align: center;
-    top: 180px;
+    top: 300px;
+    left: 29%;
 }
 
-/* .HomePage_NewPost {
-    display: block;
-    text-align: center;
-    background: #c4c4c4;
-    position: relative;
-    width: 330px;
-    height: 72px;
-    left: 700px;
-    top: 350px;
-} */
 
 .MakePost {
     background: #c4c4c4;
@@ -146,7 +151,7 @@ a:hover {
     font-size: large;
     padding: 13px 103px;
     top: 350px ;
-    left: 80%;
+    left: 20%;
 }
 
 /* Post CSS */
@@ -176,12 +181,27 @@ a:hover {
 
 /* Signup CSS */
 
+.wrapper_Sign {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper_Sign > div{
+    background:white;
+}
+
+.wrapper_Sign> div:nth-child(odd){
+    background:white;
+}
+
 .Container_SignUp {
     position: relative;
     top: 25px;
-    left: 110px;
     height: 692px;
-    width: 1225px;
+}
+
+.logo_Sign {
+    position: relative;
 }
 
 .UserName {
@@ -284,15 +304,23 @@ a:hover {
 
 
 /* login CSS */
+.wrapper_Login{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper_Login > div {
+    background:white;
+}
+
+.wrapper_Login > div:nth-child(odd){
+    background-color: white;
+}
 
 .Container_login {
-    position: relative;
     margin: 0px 0px;
     padding: 0px 0px;
-    top: 25px;
-    left: 110px;
     height: 692px;
-    width: 500px;
 }
 
 .Email_login {
@@ -328,8 +356,6 @@ a:hover {
 
 .Logo_login {
     position: relative;
-    top: 183px;
-    left: 952px;
 }
 
 /* LOG homepage */

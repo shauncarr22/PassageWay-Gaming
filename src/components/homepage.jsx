@@ -27,18 +27,20 @@ class HomePage extends Component {
         
         return(
             <div className="Container">
-                 <div className="HomePage_NewPost">
+                <div>
+                    {Object.entries(this.state.posts).map(([key,val], i) => {
+                        return (
+                            <div className="Home_PostBox" key={key}>
+                                <p className="Post_Username">{val.postAuthor}</p>
+                                <br/>
+                                <p className="Post">{val.post[0]}</p>
+                            </div>
+                        );
+                    })};
+                </div>
+                <div className="HomePage_NewPost">
                     <button className="MakePost"><Link to = '/login'>Log In To Post</Link></button>
                 </div>
-                {Object.entries(this.state.posts).map(([key,val], i) => {
-                    return (
-                        <div className="Home_PostBox" key={key}>
-                            <p className="Post_Username">{val.postAuthor}</p>
-                            <br/>
-                            <p className="Post">{val.post[0]}</p>
-                        </div>
-                    );
-                })};
             </div>
         );
     };
