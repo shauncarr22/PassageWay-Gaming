@@ -38,12 +38,10 @@ app.post('/newPost', cors(), (req,res) => {
     MongoClient.connect(`mongodb+srv://ElinkTeam:${password}@home-post-fub39.mongodb.net/test?retryWrites=true&w=majority`, (err,client) => {
         if(err) console.error(err);
         const {postAuthor, post} = req.body;
-        const date = new date
         const db = client.db('test');
         const newPost = new postNew ({
             postAuthor,
             post,
-            date
         });
         db.collection('posts').insertOne(newPost,(err) => {
             if(err) console.error(err);
