@@ -143,7 +143,7 @@ const Signup = () => {
                 ></input>
 
           
-                <p className="Twitch">Twitch</p>
+                <p className="Twitch_Sign">Twitch</p>
 
                 <input className="Twitch_input" 
                     type='text' 
@@ -152,7 +152,7 @@ const Signup = () => {
                     onChange={event => setTwitch(event.target.value)}
                 ></input>
 
-                <p className="Youtube">Youtube</p>
+                <p className="Youtube_Sign">Youtube</p>
 
                 <input className="Youtube_input" 
                     type="text"
@@ -161,7 +161,7 @@ const Signup = () => {
                     onChange={event => setYoutube(event.target.value)}
                 ></input>
 
-                <p className="Game">Game currently playing</p>
+                <p className="Game_Sign">Game currently playing</p>
 
                 <input className='Game_input' 
                     type='text'

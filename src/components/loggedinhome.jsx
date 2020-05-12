@@ -46,7 +46,9 @@ const LoggedHomePage = () => {
     const getPost = () => {
         Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
         .then((data) => {
-            setPosts(data.data)
+            let outOrder = data.data
+            let ordered = outOrder.reverse()
+            setPosts(ordered)
         });
         return;
     }

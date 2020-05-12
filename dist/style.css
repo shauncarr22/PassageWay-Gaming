@@ -198,7 +198,7 @@ a:hover {
 .Container_SignUp {
     position: relative;
     top: 25px;
-    height: 692px;
+    height: 900px;
 }
 
 .logo_Sign {
@@ -253,7 +253,7 @@ a:hover {
     left: 143px;
 }
 
-.Twitch {
+.Twitch_Sign {
     position: relative;
     top: 320px;
     left: 143px;
@@ -265,7 +265,7 @@ a:hover {
     left: 143px;
 }
 
-.Youtube {
+.Youtube_Sign {
     position: relative;
     top: 380px;
     left: 143px;
@@ -277,7 +277,7 @@ a:hover {
     left: 143px;
 }
 
-.Game {
+.Game_Sign {
     position: relative;
     top: 440px;
     left: 143px;
@@ -410,4 +410,68 @@ a:hover {
     padding: 13px 100px;
     top: 115px ;
     left: 80%;
+}
+
+/* Profile CSS */
+
+.User_wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.User_wrapper > div {
+    background: white;
+}
+
+.User_wrapper > div:nth-child(odd){
+    background: white;
+}
+
+.User_ {
+    top: 200px;
+    height: 500px;
+}
+
+.User_handles {
+    top: 200px;
+    height: 800px;
+}
+
+.User_Name {
+    position: relative;
+    top: 350px;
+    left: 60%;
+}
+
+.Twitch_ {
+    position: relative;
+    top: 290px;
+    left: 10%;
+}
+.Twitch {
+    position: relative;
+    top: 300px;
+    left: 10%;
+}
+
+.Youtube_ {
+    position: relative;
+    top: 340px;
+    left: 10%;
+}
+.Youtube {
+    position: relative;
+    top: 350px;
+    left: 10%;
+}
+
+.Game_ {
+    position: relative;
+    top: 390px;
+    left: 10%;
+}
+.Game {
+    position: relative;
+    top: 400px;
+    left: 10%;
 }

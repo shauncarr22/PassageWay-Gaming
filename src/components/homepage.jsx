@@ -19,7 +19,9 @@ class HomePage extends Component {
     getPost(){
         Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
         .then((data) => {
-            this.setState({posts: data.data})
+            let outOrder = data.data
+            let ordered = outOrder.reverse()
+            this.setState({posts: ordered})
         });
     }
 
