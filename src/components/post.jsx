@@ -56,12 +56,13 @@ const Post = () => {
     };
     
     return(
+        <div className="wrapper_Post">
         <div className="Input_Box">
-            <form>
+            <form className="form_box">
                 <textarea className="Input" rows='10' cols='75' onChange={e => setPost(e.target.value)}></textarea>
-                <br/>
-                <button className="Sumbit_Post" onClick={e => sumbitPost(e,post,user)}>Post It</button>
             </form>
+            <button className="Sumbit_Post" onClick={e => sumbitPost(e,post,user)}>Post It</button>
+        </div>
         </div>
     );
     

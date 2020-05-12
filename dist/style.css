@@ -158,15 +158,25 @@ a:hover {
 
 /* Post CSS */
 
+.wrapper_Post{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 800px;
+}
 
 .Input_Box {
     background: #c4c4c4;
     position: relative;
     text-align: center;
     width: 640px;
-    height: 250px;
+    height: 500px;
     left: 30%;
     top: 106px;
+    overflow-y: hidden;
+}
+
+.form_box {
+    height: 200px;
 }
 
 .Input {
@@ -177,7 +187,7 @@ a:hover {
 .Sumbit_Post {
     position: relative;
     font-size: large;
-    top: 16px;
+    top: 40px;
     padding: 15px 15px;
 }
 
