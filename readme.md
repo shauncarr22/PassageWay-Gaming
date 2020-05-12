@@ -2,14 +2,14 @@
 Passageway Gaming is a full stack application developed using the MERN stack. It allows users to see post made by all other users made on the site. To create a post to be seen you must create a profile and login in. 
 
 ## Table of Contents
- -[Passageway Gaming](##passageway-gaming)
-    -[Table of Contents](##table-of-contents)
-    -[Technologies](##technologies)
-    -[User Stories](##user-stories)
-    -[Future Updates](##future-updates)
-    -[Deployment](##deployment)
+ -[Passageway Gaming](#passageway-gaming)
+    -[Table of Contents](#table-of-contents)
+    -[Technologies](#technologies)
+    -[User Stories](#user-stories)
+    -[Future Updates](#future-updates)
+    -[Deployment](#deployment)
 
-## User Stories
+# User Stories
 - As a user I should be able to login using my email and password
 - As a user I should be able to quickly navigate the site
 - As a user I should be able to create post
