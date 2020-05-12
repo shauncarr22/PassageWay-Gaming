@@ -124,7 +124,7 @@ a:hover {
 
 .Post {
     position: relative;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     width: 490px;
     height: 132px;
     top: 20px;
