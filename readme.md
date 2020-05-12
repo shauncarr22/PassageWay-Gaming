@@ -3,11 +3,11 @@ Passageway Gaming is a full stack application developed using the MERN stack. It
 
 ## Table of Contents
  -[Passageway Gaming](##passageway-gaming)
- -[Table of Contents](##table-of-contents)
- -[Technologies](##technologies)
- -[User Stories](##user-stories)
- -[Future Updates](##future-updates)
- -[Deployment](##deployment)
+    -[Table of Contents](##table-of-contents)
+    -[Technologies](##technologies)
+    -[User Stories](##user-stories)
+    -[Future Updates](##future-updates)
+    -[Deployment](##deployment)
 
 ## User Stories
 - As a user I should be able to login using my email and password
@@ -20,7 +20,7 @@ Passageway Gaming is a full stack application developed using the MERN stack. It
 - As a user I should be able to upload a profile picture
 - As a user I should be abele to click and view other profiles from thier post
 
-## Technologies
+# Technologies
 | Front-End  | Back-End |  Additional Technologies  |
 | ------------- | ------------- | -------------     |
 | ![](https://camo.githubusercontent.com/70f922cbc41ea69b62cd08549e13684e34382c97/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f612f61372f52656163742d69636f6e2e7376672f3132383070782d52656163742d69636f6e2e7376672e706e67)         | ![](UI%20Pictures/mongo%20db%20pic.png)      | ![](UI%20Pictures/Heroku%20pic.png)            |
