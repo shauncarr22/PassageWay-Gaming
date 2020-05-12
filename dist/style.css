@@ -18,6 +18,7 @@ nav {
     width: auto;
     background: #222;
     padding: 10px 20px;
+    overflow-y: hidden;
 }
 
 ul {
