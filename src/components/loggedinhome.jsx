@@ -69,7 +69,7 @@ const LoggedHomePage = () => {
             </div>
             <div className="HomePage_NewPost">
                 <p className="User_cur">Logged in as {user}</p>
-                <button className="MakePost"><Link to = '/login'>Log In To Post</Link></button>
+                <button className="MakePost"><Link to = '/post'>Create New Post</Link></button>
             </div>
         </div>
     );
