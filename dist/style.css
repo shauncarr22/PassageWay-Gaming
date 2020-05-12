@@ -124,7 +124,7 @@ a:hover {
 
 .Post {
     position: relative;
-    width: 492px;
+    width: auto;
     height: 132px;
     top: 20px;
     left: 5%;
