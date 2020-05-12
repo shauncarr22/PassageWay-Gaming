@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 html,body {
@@ -124,7 +124,8 @@ a:hover {
 
 .Post {
     position: relative;
-    width: auto;
+    overflow-wrap: break-word;
+    width: 490px;
     height: 132px;
     top: 20px;
     left: 5%;
