@@ -26,7 +26,7 @@ const Player = () =>  {
     },[uid]);
 
     const getPlayer = (curEmail) => {
-        let URL = `https://passageway-gaming.herokuapp.com/getUser/`
+        let URL = `https://passageway-gaming.herokuapp.com/api/profile`
         Axios.get(URL)
         .then((data) => {
             let findUser = data.data
@@ -44,7 +44,7 @@ const Player = () =>  {
 
 
         if(user){
-            Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
+            Axios.get('https://passageway-gaming.herokuapp.com/api/post')
             .then((data) => {
                 let userPost = []
                 let list = data.data

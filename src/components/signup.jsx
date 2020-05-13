@@ -82,7 +82,7 @@ const Signup = () => {
           .then(() => {
             setTimeout(() => {
                 // let user = firebase.auth.currentUser.uid;
-                let URL =  `https://passageway-gaming.herokuapp.com/profileCreate/`
+                let URL =  `https://passageway-gaming.herokuapp.com/api/createPro`
                 Axios.post(URL, {
                     userName: username,
                     email: email,

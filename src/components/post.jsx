@@ -22,7 +22,7 @@ const Post = () => {
     }, [uid])
 
     const checkUser = (userEmail) => {
-        let URL = `https://passageway-gaming.herokuapp.com/getUser/`
+        let URL = `https://passageway-gaming.herokuapp.com/api/profile`
         Axios.get(URL)
         .then((data) => {
             let findUser = data.data
@@ -40,7 +40,7 @@ const Post = () => {
 
     const sumbitPost = (e,post,user) => {
         e.preventDefault()
-        let URL = 'https://passageway-gaming.herokuapp.com/newPost'
+        let URL = 'https://passageway-gaming.herokuapp.com/api/createPos'
         Axios.post(URL, {
             postAuthor: user,
             post: post

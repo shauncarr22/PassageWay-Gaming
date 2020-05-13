@@ -27,7 +27,7 @@ const LoggedHomePage = () => {
 
     const getUser = (userEmail) => {
         setEmail('laskey@gmail.com')
-        let URL = `https://passageway-gaming.herokuapp.com/getUser/`
+        let URL = `https://passageway-gaming.herokuapp.com/api/profile`
         Axios.get(URL)
         .then((data) => {
             let findUser = data.data
@@ -42,7 +42,7 @@ const LoggedHomePage = () => {
     };
 
     const getPost = () => {
-        Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
+        Axios.get('https://passageway-gaming.herokuapp.com/api/post')
         .then((data) => {
             let outOrder = data.data
             let ordered = outOrder.reverse()
