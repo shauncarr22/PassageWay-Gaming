@@ -22,10 +22,6 @@ const Player = () =>  {
 
     useEffect(() => {
         const currUser = firebase.auth.currentUser.email
-        getPlayer(currUser)
-    },[uid]);
-
-    const getPlayer = (curEmail) => {
         let URL = `https://passageway-gaming.herokuapp.com/api/profile`
         Axios.get(URL)
         .then((data) => {
@@ -39,25 +35,33 @@ const Player = () =>  {
                 };
             };
         });
-        
-    };
 
-
-        if(user){
-            Axios.get('https://passageway-gaming.herokuapp.com/api/post')
-            .then((data) => {
-                let userPost = []
-                let list = data.data
-                for(let i = 0; i < list.length; i++){
-                    if(list[i].postAuthor === user){
-                        userPost.push(list[i])
+        const timer = setTimeout(() => {
+            if(user){
+                Axios.get('https://passageway-gaming.herokuapp.com/api/post')
+                .then((data) => {
+                    let userPost = []
+                    let list = data.data
+                    for(let i = 0; i < list.length; i++){
+                        if(list[i].postAuthor === user){
+                            userPost.push(list[i])
+                        };
                     };
-                };
-                let outOrder = userPost
-                let ordered = outOrder.reverse()
-                setPost(ordered)
-            });
-        };
+                    let outOrder = userPost
+                    let ordered = outOrder.reverse()
+                    setPost(ordered)
+                });
+            };
+        },1000)
+
+        return () => clearTimeout(timer)
+
+    },[uid,timer]);
+
+ 
+
+
+ 
 
 
     return(
