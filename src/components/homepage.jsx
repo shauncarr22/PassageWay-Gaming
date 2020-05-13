@@ -12,18 +12,13 @@ class HomePage extends Component {
 
 
     componentDidMount(){
-        this.getPost()
-    };
-
-
-    getPost(){
         Axios.get('https://passageway-gaming.herokuapp.com/api/post')
         .then((data) => {
             let outOrder = data.data
             let ordered = outOrder.reverse()
             this.setState({posts: ordered})
         });
-    }
+    };
 
     render(){
         
