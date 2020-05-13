@@ -1,6 +1,6 @@
 {
   "name": "general_reacting",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "donuts, cats, react, and such",
   "engines": {
     "node": "12.16.2"
@@ -8,7 +8,7 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack -p",
-    "start": "node server.js",
+    "start": "cd server && node server.js",
     "apple": "webpack --mode=development --watch --display-error-details=true"
   },
   "author": "Salinas",
