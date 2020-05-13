@@ -27,7 +27,7 @@ const Player = () =>  {
         .then((data) => {
             let findUser = data.data
             for(let i = 0; i < findUser.length; i++) {
-                if(findUser[i].email === curEmail){
+                if(findUser[i].email === currUser){
                     setUser(findUser[i].userName)
                     setTwitch(findUser[i].twitch)
                     setYoutube(findUser[i].youtube)
@@ -35,31 +35,28 @@ const Player = () =>  {
                 };
             };
         });
-
-        const timer = setTimeout(() => {
-            if(user){
-                Axios.get('https://passageway-gaming.herokuapp.com/api/post')
-                .then((data) => {
-                    let userPost = []
-                    let list = data.data
-                    for(let i = 0; i < list.length; i++){
-                        if(list[i].postAuthor === user){
-                            userPost.push(list[i])
-                        };
-                    };
-                    let outOrder = userPost
-                    let ordered = outOrder.reverse()
-                    setPost(ordered)
-                });
-            };
-        },1000)
-
-        return () => clearTimeout(timer)
-
-    },[uid,timer]);
+    },[uid]);
 
  
-
+    if(!user){
+        console.log('user not found')
+    } else {
+        if(user){
+            Axios.get('https://passageway-gaming.herokuapp.com/api/post')
+            .then((data) => {
+                let userPost = []
+                let list = data.data
+                for(let i = 0; i < list.length; i++){
+                    if(list[i].postAuthor === user){
+                        userPost.push(list[i])
+                    };
+                };
+                let outOrder = userPost
+                let ordered = outOrder.reverse()
+                setPost(ordered)
+            });
+        };
+    }
 
  
 
