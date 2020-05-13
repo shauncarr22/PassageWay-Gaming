@@ -47,6 +47,7 @@ const LoggedHomePage = () => {
             let outOrder = data.data
             let ordered = outOrder.reverse()
             setPosts(ordered)
+            console.log('loggedinHome')
         });
         return;
     }

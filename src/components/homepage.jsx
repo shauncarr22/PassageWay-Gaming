@@ -17,6 +17,7 @@ class HomePage extends Component {
             let outOrder = data.data
             let ordered = outOrder.reverse()
             this.setState({posts: ordered})
+            console.log('home')
         });
     };
 
