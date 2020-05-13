@@ -1,12 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const BodyParser = require('body-parser');
+const path = require('path')
 
 const app = express();
 
 const port = process.env.PORT || 5000
 
-app.use(express.static('dist'));
+app.use(express.static(path.resolve(__dirname,'../dist')))
 
 app.use(cors());
 
