@@ -12,13 +12,13 @@ class HomePage extends Component {
 
 
     componentDidMount(){
-        Axios.get('https://passageway-gaming.herokuapp.com/api/post')
-        .then((data) => {
-            let outOrder = data.data
-            let ordered = outOrder.reverse()
-            this.setState({posts: ordered})
-            console.log('home')
-        });
+        // Axios.get('https://passageway-gaming.herokuapp.com/api/post')
+        // .then((data) => {
+        //     let outOrder = data.data
+        //     let ordered = outOrder.reverse()
+        //     this.setState({posts: ordered})
+        //     console.log('home')
+        // });
     };
 
     render(){
