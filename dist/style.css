@@ -434,13 +434,13 @@ a:hover {
     background: white;
 }
 
-.User_wrapper > div:nth-child(odd){
+/* .User_wrapper > div:nth-child(odd){
     background: white;
-}
+} */
 
 .User_ {
     top: 200px;
-    height: 500px;
+    height: 800px;
 }
 
 .User_handles {
@@ -450,39 +450,39 @@ a:hover {
 
 .User_Name {
     position: relative;
-    top: 350px;
+    top: 250px;
     left: 60%;
 }
 
 .Twitch_ {
     position: relative;
     top: 290px;
-    left: 10%;
+    left: 60%;
 }
 .Twitch {
     position: relative;
     top: 300px;
-    left: 10%;
+    left: 60%;
 }
 
 .Youtube_ {
     position: relative;
     top: 340px;
-    left: 10%;
+    left: 60%;
 }
 .Youtube {
     position: relative;
     top: 350px;
-    left: 10%;
+    left: 60%;
 }
 
 .Game_ {
     position: relative;
     top: 390px;
-    left: 10%;
+    left: 60%;
 }
 .Game {
     position: relative;
     top: 400px;
-    left: 10%;
+    left: 60%;
 }

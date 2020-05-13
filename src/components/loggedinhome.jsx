@@ -20,19 +20,17 @@ const LoggedHomePage = () => {
     if(!isAuth) reRoute.push('/')
 
     useEffect(() => {
-       const currentUser = firebase.auth.currentUser.email
+        const currentUser = firebase.auth.currentUser.email
         getUser(currentUser)
         getPost()
     },[user])
 
     const getUser = (userEmail) => {
-        console.log(userEmail);
         setEmail('laskey@gmail.com')
         let URL = `https://passageway-gaming.herokuapp.com/getUser/`
         Axios.get(URL)
         .then((data) => {
             let findUser = data.data
-            console.log(findUser[0].email);
             for(let i = 0; i < findUser.length; i++) {
                 if(findUser[i].email === userEmail){
                     setUser(findUser[i].userName)

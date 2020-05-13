@@ -12,6 +12,8 @@ const Player = () =>  {
     const [youtube, setYoutube] = useState("");
     const [game,setGame] = useState('');
 
+    const [post, setPost] = useState('')
+
     let reRoute = useHistory();
     const context = useContext(AuthContext);
     const { isAuth, uid } = context;
@@ -28,7 +30,6 @@ const Player = () =>  {
         Axios.get(URL)
         .then((data) => {
             let findUser = data.data
-            console.log(findUser[0].email);
             for(let i = 0; i < findUser.length; i++) {
                 if(findUser[i].email === curEmail){
                     setUser(findUser[i].userName)
@@ -38,20 +39,48 @@ const Player = () =>  {
                 };
             };
         });
+        
     };
+
+
+        if(user){
+            Axios.get('https://passageway-gaming.herokuapp.com/getPost/')
+            .then((data) => {
+                let userPost = []
+                let list = data.data
+                for(let i = 0; i < list.length; i++){
+                    if(list[i].postAuthor === user){
+                        userPost.push(list[i])
+                    };
+                };
+                let outOrder = userPost
+                let ordered = outOrder.reverse()
+                setPost(ordered)
+            });
+        };
+
 
     return(
         <div className="User_wrapper">
             <div className="User_">
                 <h2 className="User_Name">{user}</h2>
-            </div>
-            <div className="User_handles">
                 <h2 className="Twitch_">Streaming on Twitch;</h2>
                 <h3 className="Twitch">{twitch}</h3>
                 <h2 className="Youtube_">Highlights on Youtube;</h2>
                 <h3 className="Youtube">{youtube}</h3>
                 <h2 className="Game_">Currently looking for team on;</h2>
                 <h3 className="Game">{game}</h3>
+            </div>
+            <div className="User_Handles">
+                {Object.entries(post).map(([key,val], i) => {
+                    return (
+                        <div className="Home_PostBox" key={key}>
+                            <p className="Post_Username">{val.postAuthor}</p>
+                            <br/>
+                            <p className="Post">{val.post[0]}</p>
+                        </div>
+                    );
+                })};
             </div>
         </div>
     );
