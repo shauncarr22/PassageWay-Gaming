@@ -29,3 +29,4 @@ Passageway Gaming is a full stack application developed using the MERN stack. It
 
 ## Deployment
 Deployed using AWS EC2 (http://3.81.20.138)
+Back-up deployment (https://passageway-gaming.herokuapp.com/)
