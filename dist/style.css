@@ -157,6 +157,10 @@ a:hover {
     left: 20%;
 }
 
+.MakePost:hover {
+    background-color: purple;
+}
+
 /* Post CSS */
 
 .wrapper_Post{
@@ -190,6 +194,10 @@ a:hover {
     font-size: large;
     top: 40px;
     padding: 15px 15px;
+}
+
+.Sumbit_Post:hover {
+    background-color: purple;
 }
 
 /* Signup CSS */
@@ -309,6 +317,10 @@ a:hover {
     width: 95px;
 }
 
+.Button_signUp:hover {
+    background-color: purple;
+}
+
 .SignUp_Text {
     position: relative;
     top: 50px;
@@ -367,6 +379,11 @@ a:hover {
     height: 42px;
 }
 
+.button_login:hover{
+    background-color: purple;
+}
+
+
 .Logo_login {
     position: relative;
 }
@@ -422,6 +439,10 @@ a:hover {
     padding: 13px 100px;
     top: 115px ;
     left: 80%;
+}
+
+.LOG_MakePost:hover {
+    background-color: purple;
 }
 
 /* Profile CSS */
