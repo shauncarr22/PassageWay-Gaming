@@ -7,6 +7,7 @@
 
 html,body {
     font-family: sans-serif;
+    background-image: url('http://hypsports.com/wp-content/uploads/2017/08/esport_bg.jpg');
 }
 
 p {
@@ -97,11 +98,11 @@ a:hover {
 }
 
 .Container > div {
-    background:white;
+    background-color: transparent;
 }
 
 .Container > div:nth-child(odd){
-    background:white;
+    background-color: transparent;
 }
 
 .Home_PostBox {
@@ -199,11 +200,11 @@ a:hover {
 }
 
 .wrapper_Sign > div{
-    background:white;
+    background-color: transparent;
 }
 
 .wrapper_Sign> div:nth-child(odd){
-    background:white;
+    background-color: transparent;
 }
 
 .Container_SignUp {
@@ -322,11 +323,11 @@ a:hover {
 }
 
 .wrapper_Login > div {
-    background:white;
+    background-color: transparent;
 }
 
 .wrapper_Login > div:nth-child(odd){
-    background-color: white;
+    background-color: transparent;
 }
 
 .Container_login {
@@ -431,7 +432,7 @@ a:hover {
 }
 
 .User_wrapper > div {
-    background: white;
+    background-color: transparent;
 }
 
 /* .User_wrapper > div:nth-child(odd){
